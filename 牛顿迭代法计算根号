@@ -1,0 +1,11 @@
+a=float(input('请输入被开方数'))
+b=float(input('请输入初始值'))
+if b>a:
+    while b-a**0.5>0.0000000000000001:
+        b=(b**2+a)/(2*b)
+        print(b)
+else:
+    while a**0.5-b>0.0000000000000001 or a**0.5-b<0:
+        b=(b**2+a)/(2*b)
+        print(b)
+        print('根号'+str(a)+'≈'+str(b))
