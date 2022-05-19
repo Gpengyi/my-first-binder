@@ -8,4 +8,4 @@ else:
     while a**0.5-b>0.0000000000000001 or a**0.5-b<0:
         b=(b**2+a)/(2*b)
         print(b)
-        print('根号'+str(a)+'≈'+str(b))
+print('根号'+str(a)+'≈'+str(b))
