@@ -1,0 +1,19 @@
+import math
+z=int(input('x='))
+k=int(input('展开项数'))
+x=(z*math.pi)/180
+sum=0
+for a in range(1,k):
+    b=2*a-1
+    bc=1
+    for d in range(1,1+b):
+        bc=bc*d
+    y=x**b
+    e=(((-1)**(a+1))*(1/bc))*y
+    sum=e+sum  
+cc=abs(math.sin(x)-round(sum*10)/10)
+if cc<10**(-5):
+    about=round(sum*10)/10
+    print('sin(x)='+str(about))
+else :
+    print('sin(x)≈'+str(sum))
