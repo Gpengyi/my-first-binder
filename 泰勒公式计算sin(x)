@@ -1,5 +1,5 @@
 import math
-z=int(input('x='))
+z=float(input('x='))
 k=int(input('展开项数'))
 x=(z*math.pi)/180
 sum=0
