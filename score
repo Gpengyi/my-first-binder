@@ -1,0 +1,12 @@
+k=float(input('一班平均分'))
+x0=float(input('某个同学的分数'))
+y0=float(input('他的排名'))
+x1=float(input('另一个同学的分数'))
+y1=float(input('他的排名'))
+a=196.253*k**(-1.42644)
+b=(y1-y0)/(x1-x0)-a*(x1+x0)
+c=y0-b*x0-a*(x0)**2
+x=float(input('你的分数'))
+print('预测你的排名为：')
+print(a*x**2+b*x+c)
+        
