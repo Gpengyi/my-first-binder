@@ -1,10 +1,10 @@
 from sympy import *
 x,y,z,t = symbols('x,y,z,t')
 def ff(x,y,z):
-    u=eval(input('ff'))
+    u=eval(input('要求最值的函数'))
     return u
-fi=eval(input())
-L=u+t*fi
+fi=eval(input('条件'))
+L=ff(x,y,z)+t*fi
 dLx=diff(L,x)
 dLy=diff(L,y)
 dLz=diff(L,z)
