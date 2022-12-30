@@ -1,0 +1,13 @@
+from sympy import *
+x,y,z,t = symbols('x,y,z,t')
+def ff(x,y,z):
+    u=eval(input('ff'))
+    return u
+fi=eval(input())
+L=u+t*fi
+dLx=diff(L,x)
+dLy=diff(L,y)
+dLz=diff(L,z)
+dLt=diff(L,t)
+a,b,c,d=nsolve([dLx,dLy,dLz,dLt],[x,y,z,t],[0,0,0,0])
+print(ff(a,b,c))
