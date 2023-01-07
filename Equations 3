@@ -1,0 +1,23 @@
+from sympy import *
+from math import *
+h=1e-10
+p=0
+E_1=input('1:')
+from math import *
+h=1e-10
+p=0
+E_1=input('1:')
+E_2=input('2:')
+E_3=input('3:')
+def f1(x,y,z):
+p=0
+E_1=input('1:')
+p=0
+E_1=input('1:')
+E_1=input('1:')
+E_2=input('2:')
+E_1=input('1:')
+E_2=input('2:')
+E_2=input('2:')
+E_2=input('2:')
+E_2=input('2:')
