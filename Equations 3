@@ -1,0 +1,47 @@
+from sympy import *
+from math import *
+h=1e-10
+x=1
+y=1
+z=1
+p=0
+E_1=input('1:')
+E_2=input('2:')
+E_3=input('3:')
+def f1(x,y,z):
+   return eval(E_1)
+def f2(x,y,z):
+   return eval(E_2)
+def f3(x,y,z):
+   return eval(E_3)
+def dxf1(x,y,z):
+   return (f1(x+h,y,z)-f1(x,y,z))/h
+def dyf1(x,y,z):
+   return (f1(x,y+h,z)-f1(x,y,z))/h
+def dzf1(x,y,z):
+   return (f1(x,y,z+h)-f1(x,y,z))/h
+def dxf2(x,y,z):
+   return (f2(x+h,y,z)-f2(x,y,z))/h
+def dyf2(x,y,z):
+   return (f2(x,y+h,z)-f2(x,y,z))/h
+def dzf2(x,y,z):
+   return (f2(x,y,z+h)-f2(x,y,z))/h
+def dxf3(x,y,z):
+   return (f3(x+h,y,z)-f3(x,y,z))/h
+def dyf3(x,y,z):
+   return (f3(x,y+h,z)-f3(x,y,z))/h
+def dzf3(x,y,z):
+   return (f3(x,y,z+h)-f3(x,y,z))/h
+while abs(f1(x,y,z))>1e-10 or abs(f2(x,y,z))>1e-10 or abs(f3(x,y,z))>1e-10:
+   p=p+1
+   M_1=Matrix([[dxf1(x,y,z),dyf1(x,y,z),dzf1(x,y,z)],[dxf2(x,y,z),dyf2(x,y,z),dzf2(x,y,z)],[dxf3(x,y,z),dyf3(x,y,z),dzf3(x,y,z)]])
+   M_2=Matrix([[f1(x,y,z)],[f2(x,y,z)],[f3(x,y,z)]])
+   M_3=Matrix(Matrix([[x],[y],[z]])-(M_1**(-1))*M_2)
+   x=M_3[0,0]
+   y=M_3[1,0]
+   z=M_3[2,0]
+   print(p)
+   print(x)
+   print(y)
+   print(z)
+print('x='+str(x)+',y='+str(y)+',z='+str(z))
