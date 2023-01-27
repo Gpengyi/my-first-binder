@@ -10,4 +10,14 @@ dLy=diff(L,y)
 dLz=diff(L,z)
 dLt=diff(L,t)
 a,b,c,d=nsolve([dLx,dLy,dLz,dLt],[x,y,z,t],[0,0,0,0])
-print(ff(a,b,c))
+p=ff(a,b,c)
+for q in range(1,10) :
+    for w in range(1,10):
+        for e in range(2,9):
+            for r in range(1,10):
+                if abs((q+w*sqrt(e))/r-p)<10**(-8):
+                    print('('+str(q)+'+'+str(w)+'√'+str(e)+')/'+str(r))
+                    exit()
+                else:
+                    print(q,w,e,r)              
+print(p)
